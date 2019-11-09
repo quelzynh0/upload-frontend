@@ -11,8 +11,7 @@ const FileList = ({ files, onDelete }) => (
         <FileInfo>
           <Preview src={uploadedFile.preview} />
           <div>
-            <p>Nome do arquivo: </p><strong>{uploadedFile.name.slice(0, -4)}</strong>
-            <p>Id: </p><strong>{uploadedFile.key.slice(0, -16)}</strong>
+            Nome do arquivo: <strong>{uploadedFile.name.slice(0, -4)}</strong>
             <span>
               {uploadedFile.readableSize}{" "}
               {!!uploadedFile.url && (
