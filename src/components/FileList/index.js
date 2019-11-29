@@ -3,11 +3,14 @@ import { CircularProgressbar } from "react-circular-progressbar";
 import { MdCheckCircle, MdError, MdLink } from "react-icons/md";
 
 import { Container, FileInfo, Preview } from "./styles";
+import { ListaExames } from "../../styles";
 
 const FileList = ({ files, onDelete }) => (
   <Container>
+    
     {files.map(uploadedFile => (
-      <li key={uploadedFile.id}>
+      <ListaExames>
+      <div key={uploadedFile.id}>
         <FileInfo>
           <Preview src={uploadedFile.preview} />
           <div>
@@ -41,7 +44,7 @@ const FileList = ({ files, onDelete }) => (
             <a
               href={uploadedFile.url}
               target="_blank"
-              rel="noopener noreferrer"
+              rel="noopener noreferrer  "
             >
               <MdLink style={{ marginRight: 8 }} size={24} color="#222" />
             </a>
@@ -50,7 +53,9 @@ const FileList = ({ files, onDelete }) => (
           {uploadedFile.uploaded && <MdCheckCircle size={24} color="#78e5d5" />}
           {uploadedFile.error && <MdError size={24} color="#e57878" />}
         </div>
-      </li>
+        
+      </div>
+      </ListaExames>
     ))}
   </Container>
 );

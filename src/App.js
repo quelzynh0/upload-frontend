@@ -5,10 +5,11 @@ import filesize from "filesize";
 import api from "./services/api";
 
 import GlobalStyle from "./styles/global";
-import { Container, Content } from "./styles";
+import { Container, Content} from "./styles";
 
 import Upload from "./components/Upload";
 import FileList from "./components/FileList";
+
 
 class App extends Component {
   state = {
@@ -107,7 +108,11 @@ class App extends Component {
     return (
       <Container>
         <Content>
+          <h1>Visualização de exames médicos</h1>
+          <br />
           <Upload onUpload={this.handleUpload} />
+          <br></br>
+          <h1>Lista de Exames</h1>
           {!!uploadedFiles.length && (
             <FileList files={uploadedFiles} onDelete={this.handleDelete} />
           )}

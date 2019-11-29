@@ -21,4 +21,11 @@ html, body, #root {
     height: 100%;
 }
 
+h1 {
+    font-size: 28pt;
+    margin-bottom: 180px;
+    color: #FFF;
+    text-align: center;
+}
+
 `;
