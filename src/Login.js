@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
 import './loginstyle.css'
 import GlobalStyle from "./styles/global";
-import { BrowserRouter as Router, Route, Switch, Link} from 'react-router-dom';
-import App from './App'
+import { BrowserRouter as Router, Route, Switch, Link } from 'react-router-dom';
+import App from './App';
+import Cadastro from './Cadastrar';
 
 
 class Login extends Component {
@@ -13,7 +14,7 @@ class Login extends Component {
                     <Switch>
                         <Route path="/" exact component={Login2} ></Route>
                         <Route path="/home" component={App}></Route>
-
+                        <Route path="/cadastrar" component={Cadastro}></Route>
                     </Switch>
 
                 </Router>
@@ -31,13 +32,16 @@ const Login2 = () => (
             <form class="login-form">
                 <h3>Login</h3>
                 <br></br>
-                <input type="text" placeholder="Usuario" />
+                <input type="text" placeholder="Login" />
                 <input type="password" placeholder="Senha" />
-                <p className="message">Não tem login? Cadastre-se</p>
+                <br></br>
+                <br></br>
+                <Link to="./home" color="#f194ff" className="btnEntrar">Logar</Link>
             </form>
             <br></br>
             <br></br>
-            <Link to="./home" className="btnEntrar">Entrar</Link>
+            <br></br>
+            <p><Link to="./cadastrar">Inscrever-se</Link></p>
 
         </div>
 

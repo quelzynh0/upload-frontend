@@ -28,4 +28,8 @@ h1 {
     text-align: center;
 }
 
+p {
+    cursor: pointer;
+}
+
 `;

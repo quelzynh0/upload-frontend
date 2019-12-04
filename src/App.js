@@ -109,10 +109,21 @@ class App extends Component {
       <Container>
         <Content>
           <h1>Visualização de exames médicos</h1>
+          <br></br>
+            <br></br>
+            <br></br>
           <br />
           <Upload onUpload={this.handleUpload} />
           <br></br>
-          <h1>Lista de Exames</h1>
+          <br></br>
+            <br></br>
+            <br></br>
+            
+            
+           
+          <h1>Meus Exames</h1>
+          <br></br>
+          <br></br>
           {!!uploadedFiles.length && (
             <FileList files={uploadedFiles} onDelete={this.handleDelete} />
           )}
